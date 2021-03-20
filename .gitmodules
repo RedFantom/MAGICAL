@@ -15,9 +15,9 @@
 	url = https://github.com/RedFantom/device_generation.git
 
 [submodule "limbo"]
-    path = limbo
-    url = https://github.com/RedFantom/limbo.git
+	path = limbo
+	url = https://github.com/RedFantom/limbo.git
 
 [submodule "wnlib"]
-    path = wnlib
-    url = https://github.com/RedFantom/wnlib.git
+	path = wnlib
+	url = https://github.com/RedFantom/wnlib.git
