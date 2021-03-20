@@ -110,6 +110,7 @@ CTestTestfile.cmake
 /dist
 MANIFEST
 /venv
+*.egg-info/
 
 # Documentation
 /docs/_build
