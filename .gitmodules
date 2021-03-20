@@ -1,15 +1,23 @@
 [submodule "IdeaPlaceEx"]
 	path = IdeaPlaceEx
-	url = https://github.com/krzhu/IdeaPlaceEx.git
+	url = https://github.com/RedFantom/IdeaPlaceEx.git
 	
 [submodule "ConstGen"]
 	path = ConstGen
-	url = https://github.com/jayl940712/ConstGen.git
+	url = https://github.com/RedFantom/ConstGen.git
 
 [submodule "anaroute"]
 	path = anaroute
-	url = git@github.com:baloneymath/anaroute.git
+	url = https://github.com/RedFantom/anaroute.git
 
 [submodule "device_generation"]
 	path = device_generation
-	url = https://github.com/jayl940712/device_generation.git
+	url = https://github.com/RedFantom/device_generation.git
+
+[submodule "limbo"]
+    path = limbo
+    url = https://github.com/RedFantom/limbo.git
+
+[submodule "wnlib"]
+    path = wnlib
+    url = https://github.com/RedFantom/wnlib.git

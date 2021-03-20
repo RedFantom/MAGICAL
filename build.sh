@@ -1,7 +1,7 @@
 #!/bin/bash
-
-pip install device_generation/
-pip install ConstGen/
-pip install IdeaPlaceEX/
-pip install anaroute/
-pip install flow/cpp/magical_flow/
+set -e
+python2 -m pip install device_generation/
+python2 -m pip install ConstGen/
+python2 -m pip install IdeaPlaceEx/.
+python2 -m pip install anaroute/
+python2 -m pip install flow/cpp/magical_flow/
