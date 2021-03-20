@@ -4,6 +4,8 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(PROJECT_NAME "magicalFlow")
 project(${PROJECT_NAME})
 
+include_directories("../../..")
+
 #The project version number
 set(VERSION_MAJOR   0   CACHE STRING "Project major version number.")
 set(VERSION_MINOR   2   CACHE STRING "Project minor version number.")
@@ -37,6 +39,7 @@ add_definitions(-D_GLIBCXX_USE_CXX11_ABI=${CMAKE_CXX_ABI})
 
 
 # Find the directory for LIMBO. If cache variable LIMBO_DIR is defined, use it as the path to LIMBO, otherwise use the system LIMBO_DIR
+SET(LIMBO_DIR "../../../limbo")
 if (LIMBO_DIR)
     set(LIMBO_ROOT_DIR ${LIMBO_DIR})
     message(STATUS "Use LIMBO: ${LIMBO_ROOT_DIR}")
@@ -74,16 +77,10 @@ endif()
 mark_as_advanced(VERSION_MAJOR VERSION_MINOR VERSION_PATCH)
 
 #pybind11
-if (PYBIND11_DIR)
-    set(PYBIND11_ROOT_DIR ${PYBIND11_DIR})
-    message(STATUS "Use pybind11: ${PYBIND11_ROOT_DIR}")
-else()
-    set(PYBIND11_ROOT_DIR $ENV{PYBIND11_DIR})
-    message(STATUS "Use system pybind11: ${PYBIND11_ROOT_DIR}")
-endif()
+find_package(pybind11 REQUIRED )
+include_directories(${PYBIND11_INCLUDE_DIRS})
+link_libraries(${PYBIND11_LIBS})
 unset(PYBIND11_DIR CACHE)
-
-add_subdirectory(${PYBIND11_ROOT_DIR} "./pybind11")
 
 # boost
 find_package(Boost 1.6 REQUIRED COMPONENTS system graph iostreams)
