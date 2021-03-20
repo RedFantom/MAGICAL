@@ -1,7 +1,24 @@
 #!/bin/bash
-set -e
-python2 -m pip install device_generation/
-python2 -m pip install ConstGen/
-python2 -m pip install IdeaPlaceEx/.
-python2 -m pip install anaroute/
-python2 -m pip install flow/cpp/magical_flow/
+git submodule --init --recursive
+cd limbo
+cmake .
+make -j4
+cd ..
+cd wnlib
+make clean
+make all
+cd ..
+cd anaroute
+./clean.sh
+python2 setup.py build
+cd ..
+cd ConstGen
+./clean.sh
+python2 setup.py build
+cd ..
+cd flow/cpp/magical_flow
+python2 setup.py build
+cd ../../..
+cd IdeaPlaceEx
+./clean.sh
+python2 setup.py build

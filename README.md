@@ -20,7 +20,7 @@ This project is currently still under active development.
 - [Zlib](https://www.zlib.net)
     - Required by Limbo package
 
-- [Limbo](https://github.com/limbo018/Limbo)
+- [Limbo](https://github.c../limbo/limbo0../limbo/limbo)
     - Integrated as a thirdparty package
 
 - [LPSolve 5.5](http://lpsolve.sourceforge.net/5.5/)

@@ -16,7 +16,7 @@
 
 [submodule "limbo"]
 	path = limbo
-	url = https://github.com/RedFantom/limbo.git
+	url = https://github.com/RedFant../limbo/limbo.git
 
 [submodule "wnlib"]
 	path = wnlib
